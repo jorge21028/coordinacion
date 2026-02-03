@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Diario Docente</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="navbar-content">
+        <div class="logo">
+            <a href="#">Diario Docente</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#incidencias">Incidencias</a></li>
+            <li><a href="#reflexivo">Diario Reflexivo</a></li>
+            <li><a href="#consultas">Consultas</a></li>
+        </ul>
+    </div>
+</header>
+
+<div class="container" style="margin-top:100px">
+
+    <h1>Registro Pedagógico Individual</h1>
+    <p class="metadata">Diario anecdótico y reflexivo por estudiante</p>
+
+    <!-- ================= DIARIO ANECDÓTICO ================= -->
+    <section id="incidencias" class="content-box">
+        <h2>Diario Anecdótico</h2>
+
+        <label>Curso</label>
+        <select id="cursoIncidencia"></select>
+
+        <label>Sección</label>
+        <select id="seccionIncidencia"></select>
+
+        <label>Estudiante</label>
+        <select id="estudianteIncidencia"></select>
+
+        <label>Tipo de incidencia</label>
+        <select id="tipoIncidencia">
+            <option>Conducta</option>
+            <option>Académica</option>
+            <option>Asistencia</option>
+            <option>Convivencia</option>
+            <option>Reconocimiento</option>
+        </select>
+
+        <label>Descripción</label>
+        <textarea id="descripcionIncidencia" rows="4"></textarea>
+
+        <button onclick="guardarIncidencia()">Guardar Incidencia</button>
+    </section>
+
+    <!-- ================= DIARIO REFLEXIVO ================= -->
+    <section id="reflexivo" class="content-box">
+        <h2>Diario Reflexivo (Individual)</h2>
+
+        <label>Curso</label>
+        <select id="cursoReflexion"></select>
+
+        <label>Sección</label>
+        <select id="seccionReflexion"></select>
+
+        <label>Estudiante</label>
+        <select id="estudianteReflexion"></select>
+
+        <label>Reflexión pedagógica</label>
+        <textarea id="textoReflexion" rows="6"></textarea>
+
+        <button onclick="guardarReflexion()">Guardar Reflexión</button>
+    </section>
+
+    <!-- ================= CONSULTAS ================= -->
+    <section id="consultas" class="content-box">
+        <h2>Consulta Individual del Estudiante</h2>
+
+        <label>Curso</label>
+        <select id="cursoConsulta"></select>
+
+        <label>Sección</label>
+        <select id="seccionConsulta"></select>
+
+        <label>Estudiante</label>
+        <select id="estudianteConsulta"></select>
+
+        <button onclick="consultarHistorial()">Consultar Historial</button>
+
+        <div id="resultadoConsulta" class="content-box"></div>
+    </section>
+
+</div>
+
+<footer>
+    Diario Docente © 2026
+</footer>
+
+<script src="incidencias.js"></script>
+</body>
+</html>
